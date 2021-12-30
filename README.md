@@ -5,7 +5,7 @@ Hi, My name is Magnus, also known as nigma1337, and this is my explaination of t
 
 ### Step 0.5
 First off, we need to create a cluster.
-Personally, I made a terraform configuration to create a cluster on digitalocean, just as a small added challenge, just add your API key (which can be gotten via the DO website, under the API menu) to [terraform.tfvars]terraform.tfvars and do `terraform apply`. You can also just create the cluster via the digitalocean website. I'm gonna go with DOKS version `1.19.15-do.0`, and as i'm planning to upgrade it to version `1.21.5-do.0`, because I need to make sure my workflow is compatible with Kubernetes version `1.21.5`
+Personally, I made a terraform configuration to create a cluster on digitalocean, just as a small added challenge, just add your API key (which can be gotten via the DO website, under the API menu) to [terraform.tfvars ](terraform.tfvars)terraform.tfvars and do `terraform apply`. You can also just create the cluster via the digitalocean website. I'm gonna go with DOKS version `1.19.15-do.0`, and as i'm planning to upgrade it to version `1.21.5-do.0`, because I need to make sure my workflow is compatible with Kubernetes version `1.21.5`
 
 Also made sure to grab the kubeconfig file, via `doctl kubernetes cluster kubeconfig show -t <API-KEY-HERE> terraform-do-cluster >> ~/.kube/config`, which will also set our current context to the new cluster
 
